@@ -18,3 +18,24 @@ body {
   background-color: var(--color-white);
   font-family: "Inter", sans-serif;
 }
+
+/* ---------------------------------- */
+/*               HEADER               */
+/* ---------------------------------- */
+
+.header {
+  background: linear-gradient(
+    to right,
+    var(--color-peach),
+    var(--color-green),
+    var(--color-pink)
+  );
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,7 +1,8 @@
 const Header = () => {
   return (
     <header className="header">
-      <h1>Task Minder</h1>
+      <i className="fa-solid fa-list-check"></i>
+      <p>Task Minder</p>
     </header>
   );
 };
