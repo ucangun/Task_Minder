@@ -9,8 +9,8 @@ const Welcome = () => {
 
   return (
     <div className="welcome">
-      <p>Hello! </p>
-      <p>{formattedDate}</p>
+      <p className="hello">Hello! </p>
+      <p className="date">{formattedDate}</p>
     </div>
   );
 };
