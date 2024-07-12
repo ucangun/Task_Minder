@@ -1,0 +1,13 @@
+:root {
+  --color-green-light: #e5ffe6;
+  --color-pink-light: #f0cfd4;
+  --color-peach-light: #fff6e6;
+  --color-black: #000000;
+  --color-white: #ffffff; /* veya --color-white: #fff; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
