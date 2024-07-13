@@ -49,7 +49,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem 1rem 6rem;
+  padding: 3rem 6rem 1rem 4rem;
   color: var(--color-black);
 
   font-size: 2rem;
@@ -174,7 +174,7 @@ body {
   }
 
   .welcome {
-    padding: 3rem 4rem 1rem 5rem;
+    padding: 3rem 4rem 1rem 4rem;
   }
 
   .welcome .hello {
