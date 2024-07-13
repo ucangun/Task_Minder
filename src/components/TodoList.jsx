@@ -5,13 +5,24 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
 
   const handleClick = () => {
-    const newTodo = {
-      id: Date.now(),
-      text: todo,
-      completed: false,
-    };
-    setTodos([...todos, newTodo]);
+    if (todo) {
+      const newTodo = {
+        id: Date.now(),
+        text: todo,
+        completed: false,
+      };
+      setTodos([...todos, newTodo]);
+      setTodo("");
+    }
   };
+
+  const handleDelete = (id) => {
+    const actualTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(actualTodos);
+  };
+
+  const handleCheck = () => {};
+
   return (
     <div className="todoList">
       <div className="todoList-input">
@@ -27,8 +38,14 @@ const TodoList = () => {
           <div className="todo" key={id}>
             <p>{text}</p>
             <div className="resultBox">
-              <i className="fa-solid fa-check"></i>
-              <i className="fa-solid fa-trash"></i>
+              <i
+                className="fa-solid fa-check"
+                onClick={() => handleCheck(id)}
+              ></i>
+              <i
+                className="fa-solid fa-trash"
+                onClick={() => handleDelete(id)}
+              ></i>
             </div>
           </div>
         ))}
