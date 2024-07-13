@@ -70,7 +70,7 @@ body {
 
 .todoList {
   max-width: 75rem;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   margin: 1rem auto;
 }
 
@@ -78,7 +78,7 @@ body {
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .todoList-input input {
@@ -105,8 +105,12 @@ body {
   color: var(--color-white);
 }
 
+/* ---------------------------------- */
+/*              CONTAINER             */
+/* ---------------------------------- */
+
 .todoList-container {
-  padding: 1rem 0.5rem;
+  padding: 1rem 0rem;
   width: 60%;
   background-color: var(--color-peach);
   color: #333;
@@ -159,4 +163,83 @@ body {
 
 .completed:hover {
   background-color: var(--color-green-hover);
+}
+
+/* ---------------------------------- */
+/*             RESPONSIVE             */
+/* ---------------------------------- */
+
+@media (max-width: 800px) {
+  .todoList-input input {
+    width: 80%;
+  }
+
+  .todoList-container {
+    width: 100%;
+  }
+
+  .welcome {
+    padding: 3rem 4rem 1rem 5rem;
+  }
+
+  .welcome .hello {
+    font-size: 1.8rem;
+  }
+
+  .welcome .date {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .welcome {
+    padding: 3rem 3rem 1rem 3rem;
+  }
+
+  .todoList {
+    padding: 1rem 3rem;
+  }
+
+  .welcome .hello {
+    font-size: 1.7rem;
+  }
+
+  .welcome .date {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome {
+    padding: 3rem 2rem 1rem 2rem;
+  }
+
+  .todoList {
+    padding: 1rem 2rem;
+  }
+
+  .welcome .hello {
+    font-size: 1.6rem;
+  }
+
+  .welcome .date {
+    font-size: 0.9rem;
+  }
+
+  .todoList-input {
+    gap: 3rem;
+  }
+  .todoList-input input {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .todoList-input button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .todo p {
+    font-size: 1rem;
+  }
 }
