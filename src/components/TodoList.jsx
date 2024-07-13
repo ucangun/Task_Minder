@@ -46,7 +46,7 @@ const TodoList = () => {
       </div>
       <div className="todoList-container">
         {todos.map(({ id, text, completed }) => (
-          <div className="todo" key={id}>
+          <div className={` todo ${completed ? "completed" : ""}`} key={id}>
             <p className={completed ? "line" : ""}>{text}</p>
             <div className="resultBox">
               <i
