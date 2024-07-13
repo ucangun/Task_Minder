@@ -2,7 +2,9 @@ import { useState } from "react";
 
 const TodoList = () => {
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(
+    () => JSON.parse(localStorage.getItem("todos")) || []
+  );
 
   const handleClick = () => {
     if (todo) {
@@ -11,7 +13,9 @@ const TodoList = () => {
         text: todo,
         completed: false,
       };
-      setTodos([...todos, newTodo]);
+      const actualTodos = [...todos, newTodo];
+      setTodos(actualTodos);
+      localStorage.setItem("todos", JSON.stringify(actualTodos));
       setTodo("");
     }
   };
@@ -19,6 +23,7 @@ const TodoList = () => {
   const handleDelete = (id) => {
     const actualTodos = todos.filter((todo) => todo.id !== id);
     setTodos(actualTodos);
+    localStorage.setItem("todos", JSON.stringify(actualTodos));
   };
 
   const handleCheck = (id) => {
@@ -26,6 +31,7 @@ const TodoList = () => {
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
     setTodos(actualTodos);
+    localStorage.setItem("todos", JSON.stringify(actualTodos));
   };
 
   return (
