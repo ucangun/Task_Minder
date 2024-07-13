@@ -21,7 +21,12 @@ const TodoList = () => {
     setTodos(actualTodos);
   };
 
-  const handleCheck = () => {};
+  const handleCheck = (id) => {
+    const actualTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(actualTodos);
+  };
 
   return (
     <div className="todoList">
@@ -36,7 +41,7 @@ const TodoList = () => {
       <div className="todoList-container">
         {todos.map(({ id, text, completed }) => (
           <div className="todo" key={id}>
-            <p>{text}</p>
+            <p className={completed ? "line" : ""}>{text}</p>
             <div className="resultBox">
               <i
                 className="fa-solid fa-check"

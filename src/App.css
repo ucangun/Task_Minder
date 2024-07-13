@@ -139,3 +139,7 @@ body {
 .resultBox i {
   font-size: 1.1rem;
 }
+
+.line {
+  text-decoration: line-through;
+}
