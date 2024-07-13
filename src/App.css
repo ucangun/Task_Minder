@@ -63,3 +63,40 @@ body {
 .welcome .date {
   font-size: 1.2rem;
 }
+
+/* ---------------------------------- */
+/*              TODOLIST              */
+/* ---------------------------------- */
+
+.todoList {
+  max-width: 75rem;
+  margin: 1rem auto;
+  padding: 1rem 8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.todoList input {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 0.3rem solid var(--color-pink);
+  border-radius: 1rem;
+
+  font-size: 1rem;
+}
+
+.todoList button {
+  /* padding: 0.5rem 1rem; */
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  background-color: var(--color-pink);
+  color: #444;
+}
