@@ -1,5 +1,4 @@
 import { format } from "date-fns";
-import React, { useState } from "react";
 
 const Welcome = () => {
   // Initialize state for current date
